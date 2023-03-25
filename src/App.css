@@ -32,7 +32,58 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.grid {
+  width: 30vw;
+  height: 30vw;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.cell {
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.snake {
+  visibility: visible;
+}
+
+.snake-head {
+  align-self: stretch;
+  justify-self: stretch;
+  background-color: #FD5D5D;
+}
+
+.empty-cell {
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.snake-body-piece {
+  align-self: stretch;
+  justify-self: stretch;
+  background-color: #FF8080;
+}
+
+.snake-grid {
+  width: 30vw;
+  height: 30vw;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
