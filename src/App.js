@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import generateEmptyGrid from './Grid';
 
 const c = console.log;
 const gridColors = ["#E5FDD1", "#C9F4AA"];
@@ -21,26 +22,14 @@ function Cell({ row, col }) {
 
 function AppleGrid() {
   let w = 15, h = 15;
-  let cells = [];
-  for (let i = 0; i < h; i++) {
-    let temp = [];
-    for (let j = 0; j < w; j++) {
-      temp.push(<div className='empty-cell'></div>);
-    }
-    cells.push(temp);
-  }
+  let cells = generateEmptyGrid(w, h, <div className='empty-cell'></div>);
+
+  
 }
 
 function SnakeGrid({ snake }) {
   let w = 15, h = 15;
-  let cells = [];
-  for (let i = 0; i < h; i++) {
-    let temp = [];
-    for (let j = 0; j < w; j++) {
-      temp.push(<div className='empty-cell'></div>);
-    }
-    cells.push(temp);
-  }
+  let cells = generateEmptyGrid(w, h, <div className='empty-cell'></div>);
 
   for (let i = 1; i < snake.length; i++) {
     cells[snake[i][1]][snake[i][0]] = <div className='snake-body-piece'></div>;

@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-function generateGrid(width, height, gridCell) {
+function generateEmptyGrid(width, height, gridCell) {
     let cells = [];
     for (let i = 0; i < h; i++) {
         let temp = [];
         for (let j = 0; j < w; j++) {
-            temp.push(<div className='empty-cell'></div>);
+            temp.push(gridCell);
         }
         cells.push(temp);
     }
@@ -13,4 +13,4 @@ function generateGrid(width, height, gridCell) {
     return cells;
 }
 
-export 
+export default generateEmptyGrid;
