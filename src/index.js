@@ -59,7 +59,7 @@ class Main {
     this.interval = setInterval(() => {
       Main.calculateSnake();
       root.render(<App snake={Main.snake}/>);
-    }, 500);
+    }, 100);
   }
 }
 
